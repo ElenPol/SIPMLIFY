@@ -324,4 +324,3 @@ public class CreateChart extends JFrame{
 		frame.setVisible(true);
 		frame.setSize(1041, 653);		
 	}	
-}

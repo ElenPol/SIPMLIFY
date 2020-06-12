@@ -1,7 +1,4 @@
-
-
-
-	public class Order {
+public class Order {
 		/**
 		 * Order.java
 		 * Purpose: Class that represents an order 
@@ -187,6 +184,3 @@
 			
 		
 		}
-
-
-

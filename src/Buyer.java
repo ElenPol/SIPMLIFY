@@ -1,5 +1,3 @@
-
-
 public class Buyer {
 	/**
 	 *Buyer.java
@@ -71,4 +69,3 @@ public class Buyer {
 
 	
 }
-

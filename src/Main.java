@@ -1,4 +1,3 @@
-
 public class Main {
 
 		public static void main(String[] args) {
@@ -6,9 +5,6 @@ public class Main {
 		Users u = new Users();
 		u.extractObjectDB();
 		new LogginForm();
-		}
-
-	
-
+		}	
 	
 }

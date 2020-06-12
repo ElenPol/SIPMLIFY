@@ -1,5 +1,3 @@
-
-
 public class CompanyProduct {
 	/*CompanyProduct.java
 	* Purpose : Class that represents a product that a seller is selling
@@ -77,6 +75,4 @@ public class CompanyProduct {
 		this.sellerId = id;
 	}	
 }
-
-
 

@@ -1,4 +1,3 @@
-
 public class Supplier {
 	/**
 	 *Supplier.java
@@ -81,7 +80,3 @@ public class Supplier {
 
 
 }
-
-
-
-

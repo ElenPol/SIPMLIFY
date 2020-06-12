@@ -436,5 +436,3 @@ public class SelectionGui extends JFrame
 			return errorFlag;
 		}				
 }
-
-		

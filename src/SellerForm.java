@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -290,4 +289,3 @@ public class SellerForm extends JFrame{
 		this.setTitle("HomePage");
 	}
 }
-
