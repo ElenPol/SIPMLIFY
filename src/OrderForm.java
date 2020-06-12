@@ -230,14 +230,19 @@ public class OrderForm extends JFrame{
 	private boolean checkForError(OrderManager om) {
 		Component f = null;
 		int i=0;
-		
+		boolean orderidexists = false;
 		
 		if (textFieldOid.getText()!=null && textFieldSid.getText()!=null && textFieldPid.getText()!=null && textFieldStKid.getText()!=null)   //checking if the text fields aren't empty.
 		{
 			if (om.getOrders().getOrders().size()==0) i++;
-			for (Order o : om.getOrders().getOrders())		
-			{
-				if (!textFieldOid.getText().equals(o.getOrderId())) i++;       //checking if the order id that was given doesn't already exist.
+			for (Order o : om.getOrders().getOrders())		{
+				if (textFieldOid.getText().equals(o.getOrderId())) {		  //checking if the order id that was given doesn't already exist
+					orderidexists = true;
+				}
+				
+			}
+			if(orderidexists == false){
+				i++;
 			}
 			
 			for (Supplier s : om.getSuppliers().getSuppliers())		
@@ -281,7 +286,7 @@ public class OrderForm extends JFrame{
 			if (Double.parseDouble(textFieldQ.getText())>0) i++;	//checking if the quantity that was given is a positive number.
 		}
 
-		if(i>=6) return true; 										//if it passes all the checks then return true.
+		if(i == ) return true; 										//if it passes all the checks then return true.
 		else
 		{
 			JOptionPane.showMessageDialog(f, "Invalid input", "Error", JOptionPane.ERROR_MESSAGE);
