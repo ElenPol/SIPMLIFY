@@ -149,7 +149,7 @@ public class OrderManager extends User {
 	 *  @param index 	contains the index of the occurrence of the product
 	 */
 	public void editProduct(SupplierProduct sp, int index) {
-		products.getSupplierProducts().add(index, sp);
+		products.getSupplierProducts().set(index, sp);
 	}
 	
 	/**
@@ -205,14 +205,6 @@ public class OrderManager extends User {
 		this.suppliers.getSuppliers().add(s);
 	}
 	
-	/** 
-	 * Adds the supplier that already exists and have been edited in the specific index position of suppliers
-	 *  @param s 		supplier that already exists and have been edited
-	 *  @param index 	contains the index of the occurrence of the supplier
-	 */
-	public void editSupplier(Supplier s, int index) {
-		this.suppliers.getSuppliers().add(index, s);
-	}
 	
 	/** 
 	 * Adds the new Order to the orders list
