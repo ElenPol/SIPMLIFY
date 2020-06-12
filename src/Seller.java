@@ -185,7 +185,7 @@ public class Seller extends User {
 		if (count != 0 ) {
 			JOptionPane.showMessageDialog(null, "Some orders have changed in order","Information Message", JOptionPane.INFORMATION_MESSAGE);
 		}
-		
+		JOptionPane.showMessageDialog(null,  "The refresh has been completed", "Pop up", JOptionPane.INFORMATION_MESSAGE);
 		
 	}
 	/** 
