@@ -1,0 +1,36 @@
+BuyerForm
+Η BuyerForm κλάση προστέθηκε μετά το SDD. Δημιουργήθηκε για την προσθήκη νέου πελάτη από τον Seller.
+Εμφανίζεται μία φόρμα συμπλήρωσης στοιχείων. Γίνεται έλεγχος εάν το id του πελάτη υπάρχει στον πίνακα OrderManager.
+Αν υπάρχει γίνεται προσθήκη του πελάτη.
+
+ProductForm
+Η ProductForm κλάση προστέθηκε μετά το SDD.Δημιουργήθηκε για την προσθήκη νέου προιόντος και για τον OrderManager και για τον Seller.
+Εμφανίζεται μία φόρμα συμπλήρωσης στοιχείων. Γίνεται έλεγχος εάν το id του προιόντος υπάρχει.
+Αν υπάρχει γίνεται προσθήκη του πελάτη.
+
+SupplierForm
+H SupplierForm κλάση προστέθηκε μετά το SDD.Δημιουργήθηκε για την προσθήκη νέου προμηθευτή από τον OrderManager.
+Εμφανίζεται μία φόρμα συμπλήρωσης στοιχείων. Εμφανίζεται μία φόρμα συμπλήρωσης στοιχείων. Γίνεται έλεγχος εάν το id του προμηθευτή υπάρχει στον πίνακα Seller.
+Αν υπάρχει γίνεται προσθήκη του προμηθευτή.
+
+SelectionGUI
+Δημιουργείται πλεόν στην κλάση αυτή ένας πίνακας με τα όνοματα των μηνών String[] months ενώ αρχικά ήταν να δημιουργηθεί στην CreateChart.
+Επίσης, προστέθηκαν τα OrderManager om και Seller seller στα ορίσματα.
+
+Statistics
+Oι μέθοδοι calcOrder και calcCost συνενώθηκαν σε μία calcOMValue λόγω αρκετού κοινού κώδικα.
+Παρομοίως, συνενώθηκαν και οι calcProfit, calcPurchases σε μία calcSellerValue.
+Επιπλέον, προστέθηκε το String firstMonth και το boolean orderExists ως ορίσματα.
+
+H editSupplier του OrderManager και η editBuyer του Seller ήταν μέθοδοι που δεν υπήρχαν στο διάγραμμα Use case και είχαν προστεθεί στο SDD, αλλά δυστυχώς δεν μπόρεσαν να υλοποιηθούν και για αυτό αφαιρέθηκαν.
+
+Στις βάσεις δεδομένων, τελικά δεν χρησιμοποιήθηκαν τα Views που είχαν προστεθεί, και στην θέση τους χρησιμοποιήθηκαν join.
+
+PresentationForm
+Η PresentationForm έγινε με JTable αντί JList που ήταν αρχικα να γίνει. Επίσης έγινε προσθήκη του user στον constructor, PresentationForm().
+
+StockkeeperForm
+H StockkeeperForm έγινε τελικά με JMenuBar, JMenu και JMenuItem αντι για JButton για το searchfororder.
+
+OrderForm
+Στην OrderForm προστέθηκε επιπλέον JTextField για το stockkeeper id.
