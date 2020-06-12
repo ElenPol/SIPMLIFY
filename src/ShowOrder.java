@@ -272,7 +272,7 @@ public class ShowOrder {
 
 		 
 		 
-		 	if (order.getStatus() == 0) {	             //the order was calculated from forecast												//if the order is forcast proposal
+		 	if (order.getStatus() == 0 && order.getTotalPrice()!=0.0) {	             //the order was calculated from forecast												//if the order is forcast proposal
 				EditButton.setEnabled(false);
 				sendB.setEnabled(true);
 				sendB.addActionListener(new ActionListener() {
