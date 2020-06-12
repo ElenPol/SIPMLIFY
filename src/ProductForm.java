@@ -148,8 +148,6 @@ public class ProductForm extends JFrame{
 			expAmTXT.setBounds(763, 524, 191, 27);
 			frame.getContentPane().add(expAmTXT);	
 			
-			Suppl sop = new Suppl("109767","SE0001",2.76);
-			om.getSupplies().getSupplies().add(sop);
 			addButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e){
 					String name = nameTXT.getText();
