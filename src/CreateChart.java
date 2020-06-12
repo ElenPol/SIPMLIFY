@@ -1,5 +1,8 @@
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -14,6 +17,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.general.DefaultPieDataset;
+
 
 /**
  * CreateChart.java
@@ -324,3 +328,4 @@ public class CreateChart extends JFrame{
 		frame.setVisible(true);
 		frame.setSize(1041, 653);		
 	}	
+}
