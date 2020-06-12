@@ -68,8 +68,8 @@ public class OrderManagerForm {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		URL resource2 = getClass().getClassLoader().getResource( "windowLogo.png" );		//window logo
-    	Image icon = Toolkit.getDefaultToolkit().getImage(resource2);  
-    	frame.setIconImage(icon);
+    		Image icon = Toolkit.getDefaultToolkit().getImage(resource2);  
+    		frame.setIconImage(icon);
     	
 		frame.setResizable(true);
 		ordManagerJMenuBar= new JMenuBar();
@@ -347,7 +347,7 @@ public class OrderManagerForm {
 		
 		resultSeasonJLbl = new JLabel(ordManager.getSeason());
 		resultSeasonJLbl.setFont(new Font("HelveticaNeue", Font.PLAIN, 20));
-		resultSeasonJLbl.setBounds(676, 505, 226, 26);
+		resultSeasonJLbl.setBounds(690, 505, 226, 26);
 		panel.add(resultSeasonJLbl);
 		
 		spaceLabel5 = new JLabel("        ");
@@ -396,7 +396,7 @@ public class OrderManagerForm {
 					public void actionPerformed(ActionEvent e) {
 						
 						ordManager.setRegular(false);
-						businessTypeJLbl.setText("Season");
+						businessTypeJLbl.setText("Seasonal");
 						
 						JFrame frame2 = new JFrame();
 						frame2.setTitle("Season");
@@ -405,8 +405,8 @@ public class OrderManagerForm {
 						frame2.getContentPane().setLayout(null);
 						
 						URL resource3 = getClass().getClassLoader().getResource( "windowLogo.png" );
-				    	Image icon1 = Toolkit.getDefaultToolkit().getImage(resource3);  
-				    	frame2.setIconImage(icon1);
+				    		Image icon1 = Toolkit.getDefaultToolkit().getImage(resource3);  
+				    		frame2.setIconImage(icon1);
 				    	
 						JLabel lblChooseSeasons = new JLabel("Choose Seasons :");
 						lblChooseSeasons.setFont(new Font("HelveticaNeue", Font.PLAIN, 25));
