@@ -30,7 +30,7 @@ public class Order {
 			this.quantity = quantity;
 			this.supplierId = supplierId;
 			this.supplierName = supplierName;
-			this.supplierAFM = supplierName;
+			this.supplierAFM = supplierAFM;
 			this.date = date;
 			this.status = status;
 			this.price = price;
