@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 
 /**
  * ProductForm.java
- * Purpose :  Creates the GUI for the Product Form and adds a product (supplierproduct or companyproduct) if there is no error in the filled fields. 
+ * Purpose :  Creates the GUI for the Product Form and adds a product(supplier or company) if there is no error in the filled fields. 
  * @author Fotiadou Vassiliki
  */
 public class ProductForm extends JFrame{
@@ -148,6 +148,8 @@ public class ProductForm extends JFrame{
 			expAmTXT.setBounds(763, 524, 191, 27);
 			frame.getContentPane().add(expAmTXT);	
 			
+			Suppl sop = new Suppl("109767","SE0001",2.76);
+			om.getSupplies().getSupplies().add(sop);
 			addButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e){
 					String name = nameTXT.getText();
@@ -195,10 +197,10 @@ public class ProductForm extends JFrame{
 			safetyStock.setBounds(562, 197, 178, 21);
 			frame.getContentPane().add(safetyStock);
 			
-			JTextField supplierIDTXT = new JTextField();
-			supplierIDTXT.setColumns(10);
-			supplierIDTXT.setBounds(763, 198, 191, 27);
-			frame.getContentPane().add(supplierIDTXT);
+			JTextField safetyStockTXT = new JTextField();
+			safetyStockTXT.setColumns(10);
+			safetyStockTXT.setBounds(763, 198, 191, 27);
+			frame.getContentPane().add(safetyStockTXT);
 			
 			JLabel label = new JLabel("(6 characters)");
 			label.setFont(new Font("Helvetica Neue", Font.PLAIN,10));
@@ -224,30 +226,31 @@ public class ProductForm extends JFrame{
 			maxStockTXT.setColumns(10);
 			maxStockTXT.setBounds(763, 364, 191, 27);
 			frame.getContentPane().add(maxStockTXT);
-			
 				
-			addButton.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					String name = nameTXT.getText();
-					String id = idTXT.getText();
-					String price = priceTXT.getText();
-					String supplierID = SupplierID.getText();
-					String stockAm = stockTXT.getText();
-					String maxStock = maxStockTXT.getText();
-					String safety = safetyTXT.getText();
+		
+			
+				addButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						String name = nameTXT.getText();
+						String id = idTXT.getText();
+						String price = priceTXT.getText();
+						String safetyStock = safetyStockTXT.getText();
+						String stockAm = stockTXT.getText();
+						String maxStock = maxStockTXT.getText();
 						
-					//calls checkErrorSeller function before adding product
-					errorFlag = checkErrorSeller(name,id,price,safety,stockAm,maxStock);
 						
-					//if errorFlag = false there is no error, adds product in ArrayList Company Product
-					if(!errorFlag){
-						frame.setVisible(false);
-						CompanyProduct comp = new CompanyProduct(name,id,seller.getId(),Double.parseDouble(stockAm),Double.parseDouble(maxStock),
-														Double.parseDouble(safety),Double.parseDouble(price));
-						seller.getProducts().getCompanyProducts().add(comp);
-					}
-				    }
-			});			
+						//calls checkErrorSeller function before adding product
+						errorFlag = checkErrorSeller(name,id,price,safetyStock,stockAm,maxStock);
+						
+						//if errorFlag = false there is no error, adds product in ArrayList Company Product
+						if(!errorFlag){
+							frame.setVisible(false);
+							CompanyProduct comp = new CompanyProduct(name,id,seller.getId(),Double.parseDouble(stockAm),Double.parseDouble(maxStock),
+														Double.parseDouble(safetyStock),Double.parseDouble(price));
+							seller.getProducts().getCompanyProducts().add(comp);
+						}
+				     }
+				});			
 		}
 		
 		frame.setResizable(false);
@@ -394,7 +397,7 @@ public class ProductForm extends JFrame{
 			JOptionPane.showMessageDialog(null, "Product Price Field Must Be Filled", "Invalid Input",JOptionPane.ERROR_MESSAGE);
 			errorFlag = true;
 		}
-
+		
 		
 		if(stockAmount.isEmpty()){
 			JOptionPane.showMessageDialog(null, "Stock Amount Field Must Be Filled", "Invalid Input",JOptionPane.ERROR_MESSAGE);
@@ -413,24 +416,24 @@ public class ProductForm extends JFrame{
 		
 		//checking if product already exists
 		
-		boolean exists = false;
-		int i = 0;
-		if(!(id.isEmpty())){
-			CompanyProducts comP = new CompanyProducts();
-			comP.extractObjectDB();
-			ArrayList<CompanyProduct> compProduct = comP.getCompanyProducts();
-			while((i < compProduct.size()) && !exists){
-				if(id.equals(compProduct.get(i).getId())){
-						exists = true;
+				boolean exists = false;
+				int i = 0;
+				if(!(id.isEmpty())){
+					CompanyProducts comP = new CompanyProducts();
+					comP.extractObjectDB();
+					ArrayList<CompanyProduct> compProduct = comP.getCompanyProducts();
+					while((i < compProduct.size()) && !exists){
+						if(id.equals(compProduct.get(i).getId())){
+							exists = true;
+						}
+						i++;
+					}
 				}
-				i++;
-			}
-		}
 				
-		if(exists == true){
-			JOptionPane.showMessageDialog(null, "A Product with the same ID already exists", "Invalid Input",JOptionPane.ERROR_MESSAGE);
-			errorFlag = true;
-		}
+				if(exists == true){
+					JOptionPane.showMessageDialog(null, "A Product with the same ID already exists", "Invalid Input",JOptionPane.ERROR_MESSAGE);
+					errorFlag = true;
+				}
 
 		return errorFlag;
 	}
