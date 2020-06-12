@@ -13,7 +13,7 @@ the future, and showing statistics and diagramms about number of orders/sales, i
 Goal of O2 is to create a comercial network of companies, providing for them a safe and trustful supply chain.
 
 ***Installation***
-There is no need of installation. All you have to do is to run the runnable jar named O2.
+There is no need of installation. All you have to do is to run the runnable jar named organisedOrders but you have to download the simplify.db and have them in the same file.
 
 ***Contributing and Credits***
 Simplify is the name of our virtual company.
