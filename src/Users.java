@@ -8,6 +8,7 @@ import java.util.ArrayList;
 */
 public class Users extends ListFromDB {
 	private ArrayList<User> users = new ArrayList<User>();
+	private Statement statement = null;		//statement for users that have type OrderManager
 	
 	/**
 	 * Extracts data, creates new Users and adds them to list users
