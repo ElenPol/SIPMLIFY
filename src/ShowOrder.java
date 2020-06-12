@@ -289,7 +289,7 @@ public class ShowOrder {
 					}
 				});			
 			}
-			if (order.getStatus() == 0 && order.getTotalPrice() == 0.0) {         //if the order was calculated from forecast and was send to the supplier
+			if (order.getStatus() == 1 && order.getTotalPrice() == 0.0) {         //if the order was calculated from forecast and was send to the supplier
 				EditButton.setEnabled(false);                                 //the user can only see the proposal
 			}
 			else {
