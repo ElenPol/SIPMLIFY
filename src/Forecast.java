@@ -157,4 +157,4 @@ public class Forecast {
 		}
 		return per;
 	}
-}	
+}

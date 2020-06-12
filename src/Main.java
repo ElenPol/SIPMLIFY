@@ -5,10 +5,6 @@ public class Main {
 		Users u = new Users();
 		u.extractObjectDB();
 		new LogginForm();
-		}
-
-	
-
+		}	
 	
 }
-
