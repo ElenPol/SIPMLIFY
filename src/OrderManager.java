@@ -242,6 +242,7 @@ public class OrderManager extends User {
 		orders.updateObjectDB();
 		products.updateObjectDB();
 		proposals.updateObjectDB();
+		supplies.updateObjectDB();
 		
 		initializeLists();
 		int count = 0 ;
