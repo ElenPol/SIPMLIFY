@@ -160,7 +160,7 @@ public class SearchForm extends JFrame{
 			    flag = true;
 			}
 		}
-		else if (list.getSelectedIndex() == 5 &&( key.getText().length() != 1 || key.getText().matches("[0-4]{1}") == false)) {     //if sixth field was choosen from the list and key field length does not have 1 character or contain digits other than [0-4].	
+		else if (list.getSelectedIndex() == 5 &&( key.getText().length() != 1 || key.getText().matches("[0-5]{1}") == false)) {     //if sixth field was choosen from the list and key field length does not have 1 character or contain digits other than [0-5].	
 			JOptionPane.showMessageDialog(this,"Invalid input in key field.");
 			flag = true;
 		}
