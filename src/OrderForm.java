@@ -281,7 +281,7 @@ public class OrderForm extends JFrame{
 			if (Double.parseDouble(textFieldQ.getText())>0) i++;	//checking if the quantity that was given is a positive number.
 		}
 
-		if(i==6) return true; 										//if it passes all the checks then return true.
+		if(i>=6) return true; 										//if it passes all the checks then return true.
 		else
 		{
 			JOptionPane.showMessageDialog(f, "Invalid input", "Error", JOptionPane.ERROR_MESSAGE);
