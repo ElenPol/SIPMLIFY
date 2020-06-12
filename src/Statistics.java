@@ -185,7 +185,7 @@ public class Statistics {
 			for(int i = 0; i < orders.size(); i++)
 			{
 				//checks if the first 7 letters of string are the same as date given by the supplier
-				if(date.equals(orders.get(i).getDate().substring(0,6))){
+				if(date.equals(orders.get(i).getDate().substring(0,7))){
 					if(options[1].equals("Date")){			 //if filter = date
 						
 						
